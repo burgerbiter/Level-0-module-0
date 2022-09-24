@@ -45,9 +45,11 @@ def key_pressed():
 
     # 10. Increment the x and y variables of the 2 eye variables by 5:
     #     left_eye.x += 5
-    
+    leye.x += 5
+    reye.x += 5
     # 11. Call the .draw() method for both eye variables.
-
+    leye.draw()
+    reye.draw()
 
 if __name__ == '__main__':
     window = turtle.Screen()
@@ -61,16 +63,17 @@ if __name__ == '__main__':
     
     # 2. Call the set_background() function with your variable inside of the parenthesis
     #    for example, set_background(bg_image)
-
+    set_background('bigEyedCat.gif')
     # 3. Make a new turtle
-
+    rat = turtle.Turtle()
+    rat.color('red', 'red')
     # 4. Set the turtle color and pen color to red (or any color you want)
     #    using .color('red', 'red')
 
     # 5. Set the turtle width to 0 so no outlines are drawn
-
+    rat.width(0)
     # 6. Set the turtle speed to 0 (fastest)
-
+    rat.speed(0)
     # 7. Run the program and click on one of the cat's eyes. 
     #    The x,y position of the eye will be printed at the bottom of your
     #    processing window.
@@ -82,9 +85,11 @@ if __name__ == '__main__':
     #    and initialize them:
     #    left_eye  = Eye(eye=my_turtle, x=-34, y=11, radius=30)
     #    right_eye = Eye(eye=my_turtle, x=40, y=-5, radius=30)
-
+    leye = Eye(eye=rat, x=-32, y=17, radius=16)
+    reye = Eye(eye=rat, x=45, y=0, radius=19)
     # 9. Call the .draw() method on BOTH eye variables
-
+    leye.draw()
+    reye.draw()
 
 # ===================== DO NOT EDIT THE CODE BELOW ============================
     window.onclick(screen_clicked)
